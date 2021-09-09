@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KMy-k9-uhD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit Profile View Controller2-->
+        <scene sceneID="OqK-Zg-1sN">
+            <objects>
+                <viewController id="KMy-k9-uhD" customClass="EditProfileViewController2" customModule="profile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="18i-fS-MnI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EoQ-K8-mlu">
+                                <rect key="frame" x="100" y="194" width="39.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjA-mA-mJ5">
+                                <rect key="frame" x="192" y="268" width="30" height="30"/>
+                                <state key="normal" title="End">
+                                    <color key="titleColor" systemColor="systemPurpleColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="endEditButton:" destination="KMy-k9-uhD" eventType="touchUpInside" id="diH-LA-pws"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hcb-FP-WQk">
+                                <rect key="frame" x="149.5" y="194" width="150" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="dhx-IZ-bia"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KU8-Ex-0Q2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EoQ-K8-mlu" firstAttribute="leading" secondItem="KU8-Ex-0Q2" secondAttribute="leading" constant="100" id="1ia-pi-QFy"/>
+                            <constraint firstItem="IjA-mA-mJ5" firstAttribute="top" secondItem="hcb-FP-WQk" secondAttribute="bottom" constant="40" id="Biy-er-sP0"/>
+                            <constraint firstItem="hcb-FP-WQk" firstAttribute="leading" secondItem="EoQ-K8-mlu" secondAttribute="trailing" constant="10" id="Cyw-9M-e9R"/>
+                            <constraint firstItem="EoQ-K8-mlu" firstAttribute="top" secondItem="KU8-Ex-0Q2" secondAttribute="top" constant="200" id="N0g-pd-eMP"/>
+                            <constraint firstItem="EoQ-K8-mlu" firstAttribute="top" secondItem="KU8-Ex-0Q2" secondAttribute="top" constant="150" id="RRS-tw-2Yq"/>
+                            <constraint firstItem="IjA-mA-mJ5" firstAttribute="top" secondItem="hcb-FP-WQk" secondAttribute="bottom" constant="40" id="UvJ-Zk-siT"/>
+                            <constraint firstItem="IjA-mA-mJ5" firstAttribute="centerX" secondItem="18i-fS-MnI" secondAttribute="centerX" id="dTw-fA-JTz"/>
+                            <constraint firstItem="hcb-FP-WQk" firstAttribute="top" secondItem="KU8-Ex-0Q2" secondAttribute="top" constant="150" id="ejj-5b-Sbe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="hcb-FP-WQk" id="Zwx-9T-dxv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tAT-Aq-hoH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="-14"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yHx-gQ-ERg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="F8H-PY-MIL">
+            <objects>
+                <viewController id="yHx-gQ-ERg" customClass="EditProfileViewController" customModule="profile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YfW-AK-F9R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oin-yX-p4d">
+                                <rect key="frame" x="100" y="144" width="39.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x3P-vU-l1I">
+                                <rect key="frame" x="149.5" y="144" width="150" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="58G-kF-3Me"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVc-r3-IlE">
+                                <rect key="frame" x="192" y="198" width="30" height="30"/>
+                                <state key="normal" title="End"/>
+                                <connections>
+                                    <action selector="endEditButton:" destination="yHx-gQ-ERg" eventType="touchUpInside" id="ixk-Un-luE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7lT-fd-8km"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x3P-vU-l1I" firstAttribute="leading" secondItem="Oin-yX-p4d" secondAttribute="trailing" constant="10" id="PUR-Ai-TGJ"/>
+                            <constraint firstItem="LVc-r3-IlE" firstAttribute="top" secondItem="x3P-vU-l1I" secondAttribute="bottom" constant="20" id="R5j-4r-gwr"/>
+                            <constraint firstItem="x3P-vU-l1I" firstAttribute="top" secondItem="7lT-fd-8km" secondAttribute="top" constant="100" id="g04-r1-iNf"/>
+                            <constraint firstItem="Oin-yX-p4d" firstAttribute="leading" secondItem="7lT-fd-8km" secondAttribute="leading" constant="100" id="jZK-gJ-VMH"/>
+                            <constraint firstItem="LVc-r3-IlE" firstAttribute="centerX" secondItem="YfW-AK-F9R" secondAttribute="centerX" id="oca-ud-8oc"/>
+                            <constraint firstItem="Oin-yX-p4d" firstAttribute="top" secondItem="7lT-fd-8km" secondAttribute="top" constant="100" id="xhk-GV-fkz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextFiled" destination="x3P-vU-l1I" id="NIJ-ME-bAA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zRs-0c-DSO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-701" y="127"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PMa-kf-eHC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit View View Controller-->
+        <scene sceneID="dPW-Er-1oQ">
+            <objects>
+                <viewController id="PMa-kf-eHC" customClass="EditViewViewController" customModule="Profile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="od1-sV-297">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKY-6b-7yD">
+                                <rect key="frame" x="100" y="144" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNf-mH-rKa">
+                                <rect key="frame" x="190.5" y="198" width="33" height="35"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="End">
+                                    <color key="titleColor" red="0.20392156859999999" green="0.12562500230000001" blue="0.14662151200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="endEditButton:" destination="PMa-kf-eHC" eventType="touchUpInside" id="AXw-sR-pFl"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BXU-pN-JmM">
+                                <rect key="frame" x="162" y="144" width="150" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="eNz-sZ-mgD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="i1l-uH-lf7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yNf-mH-rKa" firstAttribute="centerX" secondItem="od1-sV-297" secondAttribute="centerX" id="5bp-Hq-jsx"/>
+                            <constraint firstItem="BXU-pN-JmM" firstAttribute="top" secondItem="i1l-uH-lf7" secondAttribute="top" constant="100" id="DGT-B9-VSm"/>
+                            <constraint firstItem="yNf-mH-rKa" firstAttribute="centerX" secondItem="od1-sV-297" secondAttribute="centerX" id="LbS-0y-eQ2"/>
+                            <constraint firstItem="yNf-mH-rKa" firstAttribute="top" secondItem="BXU-pN-JmM" secondAttribute="bottom" constant="20" id="Mjb-FP-i4P"/>
+                            <constraint firstItem="PKY-6b-7yD" firstAttribute="leading" secondItem="i1l-uH-lf7" secondAttribute="leading" constant="100" id="fWN-Mm-fzM"/>
+                            <constraint firstItem="PKY-6b-7yD" firstAttribute="top" secondItem="i1l-uH-lf7" secondAttribute="top" constant="100" id="nAi-25-PEY"/>
+                            <constraint firstItem="BXU-pN-JmM" firstAttribute="leading" secondItem="PKY-6b-7yD" secondAttribute="trailing" constant="10" id="uyS-vV-Br3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="BXU-pN-JmM" id="xC5-NY-OTa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pHn-Xf-oIf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-316" y="230"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

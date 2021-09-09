@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KAD-rq-bBS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="7lB-cQ-rDU">
+            <objects>
+                <viewController id="KAD-rq-bBS" userLabel="Edit Profile View Controller" customClass="EditProfileViewController" customModule="Profile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c0n-Of-vVJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNs-Bj-qtd">
+                                <rect key="frame" x="100" y="144" width="39.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nc-KY-nax">
+                                <rect key="frame" x="192" y="198" width="30" height="30"/>
+                                <state key="normal" title="End"/>
+                                <connections>
+                                    <action selector="endEditButton:" destination="KAD-rq-bBS" eventType="touchUpInside" id="9pb-9V-bOM"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a5n-6r-KAz">
+                                <rect key="frame" x="149.5" y="144" width="150" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="30J-zy-C5n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cUP-PB-Hhv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a5n-6r-KAz" firstAttribute="leading" secondItem="zNs-Bj-qtd" secondAttribute="trailing" constant="10" id="5e5-ni-gE4"/>
+                            <constraint firstItem="zNs-Bj-qtd" firstAttribute="leading" secondItem="cUP-PB-Hhv" secondAttribute="leading" constant="100" id="LkL-dj-fpE"/>
+                            <constraint firstItem="2Nc-KY-nax" firstAttribute="top" secondItem="a5n-6r-KAz" secondAttribute="bottom" constant="20" id="SA7-b8-b5p"/>
+                            <constraint firstItem="zNs-Bj-qtd" firstAttribute="top" secondItem="cUP-PB-Hhv" secondAttribute="top" constant="100" id="gBg-uP-NWt"/>
+                            <constraint firstItem="a5n-6r-KAz" firstAttribute="top" secondItem="cUP-PB-Hhv" secondAttribute="top" constant="100" id="l2A-Cf-aDT"/>
+                            <constraint firstItem="2Nc-KY-nax" firstAttribute="centerX" secondItem="c0n-Of-vVJ" secondAttribute="centerX" id="ud9-rZ-sPi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="a5n-6r-KAz" id="uSq-Eu-cXj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KBP-n4-Xvm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-481.15942028985512" y="39.508928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

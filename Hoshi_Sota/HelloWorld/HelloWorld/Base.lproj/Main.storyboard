@@ -16,20 +16,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOK-jT-mt7">
-                                <rect key="frame" x="169" y="429" width="76" height="38.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" systemColor="systemRedColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sNE-hY-R88">
+                                <rect key="frame" x="169" y="403.5" width="76" height="89.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOK-jT-mt7">
+                                        <rect key="frame" x="0.0" y="0.0" width="76" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ZG-lR-wLP">
+                                        <rect key="frame" x="13.5" y="58.5" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="hiddenSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="VDE-Yx-5Np"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="uOK-jT-mt7" secondAttribute="trailing" id="B0C-an-njV"/>
+                                    <constraint firstItem="5ZG-lR-wLP" firstAttribute="top" secondItem="uOK-jT-mt7" secondAttribute="bottom" constant="20" id="IEx-vn-dqy"/>
+                                    <constraint firstItem="uOK-jT-mt7" firstAttribute="leading" secondItem="sNE-hY-R88" secondAttribute="leading" id="R0m-Zp-vUT"/>
+                                    <constraint firstAttribute="bottom" secondItem="5ZG-lR-wLP" secondAttribute="bottom" id="SRi-PU-WOe"/>
+                                    <constraint firstItem="uOK-jT-mt7" firstAttribute="centerX" secondItem="sNE-hY-R88" secondAttribute="centerX" id="WdR-r5-nfh"/>
+                                    <constraint firstItem="5ZG-lR-wLP" firstAttribute="centerX" secondItem="sNE-hY-R88" secondAttribute="centerX" id="lQQ-7o-MhC"/>
+                                    <constraint firstItem="uOK-jT-mt7" firstAttribute="top" secondItem="sNE-hY-R88" secondAttribute="top" id="xS4-Ft-Gdl"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="uOK-jT-mt7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1CW-rc-HLg"/>
-                            <constraint firstItem="uOK-jT-mt7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4P9-jH-lQz"/>
-                            <constraint firstItem="uOK-jT-mt7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DIh-gJ-wMj"/>
-                            <constraint firstItem="uOK-jT-mt7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="E5n-Jz-gV1"/>
+                            <constraint firstItem="sNE-hY-R88" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hyx-IV-QwK"/>
+                            <constraint firstItem="sNE-hY-R88" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jJ1-eH-yG0"/>
                         </constraints>
                     </view>
                     <connections>
@@ -45,6 +64,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

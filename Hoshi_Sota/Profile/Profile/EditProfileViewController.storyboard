@@ -22,13 +22,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nc-KY-nax">
-                                <rect key="frame" x="192" y="198" width="30" height="30"/>
-                                <state key="normal" title="End"/>
-                                <connections>
-                                    <action selector="endEditButton:" destination="KAD-rq-bBS" eventType="touchUpInside" id="9pb-9V-bOM"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="年齢:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7O-fO-0G7">
+                                <rect key="frame" x="100" y="199.5" width="39.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a5n-6r-KAz">
                                 <rect key="frame" x="149.5" y="144" width="150" height="34"/>
                                 <constraints>
@@ -37,19 +36,46 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MrP-fh-ujK">
+                                <rect key="frame" x="149.5" y="193" width="150" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="TTI-a1-G7S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O76-IN-sza">
+                                <rect key="frame" x="0.0" y="237" width="414" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nc-KY-nax">
+                                <rect key="frame" x="192" y="463" width="30" height="30"/>
+                                <state key="normal" title="End"/>
+                                <connections>
+                                    <action selector="endEditButton:" destination="KAD-rq-bBS" eventType="touchUpInside" id="9pb-9V-bOM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cUP-PB-Hhv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="O76-IN-sza" firstAttribute="trailing" secondItem="cUP-PB-Hhv" secondAttribute="trailing" id="3MO-f5-tkg"/>
                             <constraint firstItem="a5n-6r-KAz" firstAttribute="leading" secondItem="zNs-Bj-qtd" secondAttribute="trailing" constant="10" id="5e5-ni-gE4"/>
+                            <constraint firstItem="O76-IN-sza" firstAttribute="top" secondItem="MrP-fh-ujK" secondAttribute="bottom" constant="10" id="GHZ-2a-ZkH"/>
                             <constraint firstItem="zNs-Bj-qtd" firstAttribute="leading" secondItem="cUP-PB-Hhv" secondAttribute="leading" constant="100" id="LkL-dj-fpE"/>
-                            <constraint firstItem="2Nc-KY-nax" firstAttribute="top" secondItem="a5n-6r-KAz" secondAttribute="bottom" constant="20" id="SA7-b8-b5p"/>
+                            <constraint firstItem="Q7O-fO-0G7" firstAttribute="leading" secondItem="cUP-PB-Hhv" secondAttribute="leading" constant="100" id="RuO-9A-tsY"/>
+                            <constraint firstItem="MrP-fh-ujK" firstAttribute="top" secondItem="a5n-6r-KAz" secondAttribute="bottom" constant="15" id="TRm-PM-m3Y"/>
+                            <constraint firstItem="O76-IN-sza" firstAttribute="leading" secondItem="cUP-PB-Hhv" secondAttribute="leading" id="chw-aj-6XW"/>
+                            <constraint firstItem="2Nc-KY-nax" firstAttribute="top" secondItem="O76-IN-sza" secondAttribute="bottom" constant="10" id="e7Q-Vp-yKM"/>
                             <constraint firstItem="zNs-Bj-qtd" firstAttribute="top" secondItem="cUP-PB-Hhv" secondAttribute="top" constant="100" id="gBg-uP-NWt"/>
                             <constraint firstItem="a5n-6r-KAz" firstAttribute="top" secondItem="cUP-PB-Hhv" secondAttribute="top" constant="100" id="l2A-Cf-aDT"/>
+                            <constraint firstItem="MrP-fh-ujK" firstAttribute="leading" secondItem="Q7O-fO-0G7" secondAttribute="trailing" constant="10" id="tQi-2d-qjY"/>
                             <constraint firstItem="2Nc-KY-nax" firstAttribute="centerX" secondItem="c0n-Of-vVJ" secondAttribute="centerX" id="ud9-rZ-sPi"/>
+                            <constraint firstItem="Q7O-fO-0G7" firstAttribute="top" secondItem="zNs-Bj-qtd" secondAttribute="bottom" constant="35" id="y7m-DX-m4b"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ageTextField" destination="MrP-fh-ujK" id="bp5-GY-IQe"/>
+                        <outlet property="departmentSettingPicker" destination="O76-IN-sza" id="872-ju-688"/>
                         <outlet property="nameTextField" destination="a5n-6r-KAz" id="uSq-Eu-cXj"/>
                     </connections>
                 </viewController>

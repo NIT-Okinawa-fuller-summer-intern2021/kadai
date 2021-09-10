@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  HelloWorld
+//  Timer
 //
-//  Created by fuller on 2021/09/07.
+//  Created by fuller on 2021/09/09.
 //
 
 import UIKit

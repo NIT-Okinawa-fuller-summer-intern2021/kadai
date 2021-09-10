@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  HelloWorld
+//  Okashi
 //
-//  Created by fuller on 2021/09/07.
+//  Created by fuller on 2021/09/10.
 //
 
 import UIKit

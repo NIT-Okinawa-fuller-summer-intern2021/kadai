@@ -8,8 +8,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var HelloLabel: UILabel!
     
+    @IBOutlet weak var HelloLabel: UILabel!
+    @IBAction func hiddenSwitch(_ sender: UISwitch) {
+        HelloLabel.isHidden = !sender.isOn
+    }
+
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
